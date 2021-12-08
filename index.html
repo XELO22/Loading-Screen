@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Odwet RP</title>
+
+    <link rel="stylesheet" href="animate.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <div class="menu-trigger top-position" id="menu">
+        <button class="lines-button minus menu-toggle" id="main-menu-caller" type="button"><span class="lines"></span></button>
+      </div>
+
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+    
+    <audio id="loading" src="music.mp3" autoplay="true" hidden="true" loop="true"></audio>       
+
+        <h1>Odwet<span class="kolor">RP</span></h1>
+
+        <h2>https://discord.gg/XWXJzteD9y</h2>
+
+        <h6>Kliknij [spacje] aby wyciszyć/odciszyć muzyke</h6>
+    </div>
+
+
+        <div id="footer">
+
+            Odwet RP miłej Rozgrywki <br> 
+
+        </div>
+
+        <script>
+            var play = false;
+                    var vid = document.getElementById("loading");
+                    vid.volume = 0.1;
+                    window.addEventListener('keyup', function(e)
+                    {
+                        if (e.which == 69){
+                            vid.volume = Math.min(vid.volume + 0.1,1);
+                        } else if(e.which == 65){
+                            vid.volume = Math.max(vid.volume - 0.1,0);
+                        };
+                    });
+            
+                    var audio = document.querySelector('audio');
+            
+                    if (audio) {
+            
+                    window.addEventListener('keydown', function (event) {
+            
+                    var key = event.which || event.keyCode;
+            
+                    if (key === 32) {
+            
+                    event.preventDefault();
+            
+                    audio.paused ? audio.play() : audio.pause();
+                  
+                }
+            
+              });
+            }
+            </script>
+
+    <script src="index.js" type="text/javascript"></script>
+
+    <script src="particles.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
